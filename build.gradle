@@ -1,0 +1,14 @@
+apply plugin:'scala'
+defaultTasks 'build'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	scalaTools 'org.scala-lang:scala-compiler:2.9.0-1', 'org.scala-lang:scala-library:2.9.0-1'
+	compile 'org.scala-lang:scala-library:2.9.0-1', 'org.slf4j:slf4j-api:1.6.1'
+	testCompile 'junit:junit:4.8.2', 'org.scalatest:scalatest:1.2'
+	testRuntime 'org.slf4j:slf4j-simple:1.6.1'
+}

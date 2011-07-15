@@ -1,0 +1,3 @@
+Este proyecto contiene varias versiones de un simple "Hola Mundo!" en Scala; abre un servidor en un puerto (default 9999) que recibe conexiones, lee una sola línea de texto y devuelve un saludo por el mismo socket, para después cerrarlo.
+
+Hay implementaciones con hilos, con actores, con funciones, etc.
