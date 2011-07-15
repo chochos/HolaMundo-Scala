@@ -4,6 +4,10 @@ import scala.actors.Actor
 import scala.actors.Actor._
 import java.io._
 
+/** Esta version difiere de la anterior porque este actor es un singleton, de modo que solamente se arranca
+ * una vez y luego se le debe enviar el socket como mensaje para que haga lo suyo.
+ * @author Enrique Zamudio
+ */
 object Proceso extends Actor {
 
   def act() {

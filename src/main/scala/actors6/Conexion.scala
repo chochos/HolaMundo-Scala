@@ -6,6 +6,13 @@ import java.io._
 import java.net.Socket
 import org.slf4j._
 
+/** Este actor singleton recibe un socket y lee de ahi el texto, con un timeout
+ * para no quedarse esperando indefinidamente.
+ * Si recibe saludo, envia mensaje sincrono al Saludador, que genera y devuelve una cadena con el saludo.
+ * Si el Saludador devuelve None, es porque recibio una despedida y entonces se comienza la secuencia de shutdown.
+ *
+ * @author Enrique Zamudio
+ */
 object Conexion extends Actor {
 
   private val log = LoggerFactory.getLogger(getClass)
@@ -29,7 +36,7 @@ object Conexion extends Actor {
                 exit()
               case wtf:Object => println("No se que hacer con {} tipo {}", wtf, wtf.getClass.getName)
               case wtf =>
-                println("que carajos es un " + wtf)
+              log.warn("que carajos es un {}", wtf)
             }
           } catch {
             case ex:java.net.SocketTimeoutException =>

@@ -5,6 +5,8 @@ import scala.actors.Actor._
 import java.io._
 import java.net.Socket
 
+//Este actor singleton recibe un socket, lee el texto y envia lo leido al Escritor
+//Ahora la case class trae mas datos (incluye el socket)
 object Lector extends Actor {
 
   def act() {

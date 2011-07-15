@@ -5,6 +5,11 @@ import org.slf4j._
 
 case class Saluda(nombre:String, fecha:java.util.Date)
 
+/** Este es el servidor mas complicado hasta ahora: ahora si ya se puede cerrar
+ * invocando un metodo. Sigue usando actores singleton, pero ya tenemos manejo de excepciones.
+ *
+ * @author Enrique Zamudio
+ */
 object Servidor {
 
   val log = LoggerFactory.getLogger(getClass())

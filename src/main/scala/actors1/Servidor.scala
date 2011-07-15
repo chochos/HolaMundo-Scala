@@ -2,6 +2,9 @@ package hello.actors1
 
 import java.net.ServerSocket
 
+/** En esta version ya hicimos singleton a todo el Servidor.
+ * @author Enrique Zamudio
+ */
 object Servidor {
 
   def run(port:Int) = {

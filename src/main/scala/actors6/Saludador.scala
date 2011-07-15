@@ -5,6 +5,11 @@ import scala.actors.Actor._
 import java.io._
 import org.slf4j._
 
+/** Este actor es nuevo, simplemente genera un saludo, PERO si recibe una cadena que parezca
+ * una despedida entonces termina y devuelve None.
+ *
+ * @author Enrique Zamudio
+ */
 object Saludador extends Actor {
 
   private val log = LoggerFactory.getLogger(getClass())

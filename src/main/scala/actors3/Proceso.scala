@@ -4,6 +4,10 @@ import scala.actors.Actor
 import scala.actors.Actor._
 import java.io._
 
+/** En esta version partimos la tarea en dos actores.
+ * Este actor arranca, echa a andar el Lector y se queda esperando su mensaje.
+ * @author Enrique Zamudio
+ */
 class Proceso(socket:java.net.Socket) extends Actor {
 
   def act() {

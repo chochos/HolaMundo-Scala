@@ -2,8 +2,12 @@ package hello
 
 import java.net.ServerSocket
 
+/** Este es el servidor mas simple. Primera version: Practicamente igual a lo que haria en Java.
+ * @author Enrique Zamudio
+ */
 class Servidor(port:Int) {
 
+	/** Esto es para poder detener el servidor de manera remota */
 	var sigue = true
 
 	def stop() {
@@ -21,6 +25,7 @@ class Servidor(port:Int) {
 	}
 }
 
+/** En Scala no hay metodos estaticos asi que tenemos que meter el main en un singleton */
 object Main {
 
 	def main(args:Array[String]) = {

@@ -5,6 +5,8 @@ import scala.actors.Actor._
 import java.io._
 import java.net.Socket
 
+//Este escritor singleton puede recibir un socket solito (en cuyo caso lo reenvia al Lector)
+//O puede recibir un saludo, en cuyo caso terminar de procesar.
 object Escritor extends Actor {
 
   def act() {

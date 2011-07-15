@@ -2,6 +2,14 @@ package hello.actors3
 
 import java.net.ServerSocket
 
+//El servidor sigue sin cambiar desde hace dos versiones.
+package hello.actors3
+
+import scala.actors.Actor
+import scala.actors.Actor._
+import java.io._
+
+//Este servidor crea un Proceso por socket y lo arranca (es un actor)
 object Servidor {
 
   def run(port:Int) = {

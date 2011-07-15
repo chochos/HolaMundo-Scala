@@ -2,6 +2,7 @@ package hello.actors2
 
 import java.net.ServerSocket
 
+/** Este servidor es identico al anterior. */
 object Servidor {
 
   def run(port:Int) = {

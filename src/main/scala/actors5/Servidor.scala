@@ -2,8 +2,10 @@ package hello.actors5
 
 import java.net.{ServerSocket,Socket}
 
+//Ya meti la case class aqui en vez de tenerla en un archivo separado.
 case class Saluda(nombre:String, fecha:java.util.Date, socket:Socket)
 
+//Aqui tenemos nuevamente Lector y Escritor como singletons.
 object Servidor {
 
   def run(port:Int) = {

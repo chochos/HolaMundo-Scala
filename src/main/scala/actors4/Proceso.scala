@@ -4,6 +4,9 @@ import scala.actors.Actor
 import scala.actors.Actor._
 import java.io._
 
+/** Este actor es muy similar al anterior pero puede recibir dos mensajes distintos.
+ * @author Enrique Zamudio
+ */
 class Proceso(socket:java.net.Socket) extends Actor {
 
   def respond(nombre:String) {
